@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Commandes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
+
+</head>
+</head>
+<body>
+    <h1>Gestion des Commandes</h1>
+    <form id="order-form">
+        <input type="text" id="customer-name" placeholder="Nom du Client" required>
+        <input type="text" id="invoice-number" placeholder="Numéro de Facture" required>
+        <div id="product-container">
+            <input type="text" class="product-name" placeholder="Nom du Produit" required>
+            <input type="text" class="product-number" placeholder="Numéro du Produit" required>
+        </div>
+        <button type="button" id="add-product">Ajouter un Produit</button>
+        <input type="date" id="purchase-date" required>
+        <input type="text" id="order-amount" placeholder="Montant de la Commande" required>
+        <select id="payment-status">
+            <option value="Payé">Payé</option>
+            <option value="Non payé">Non payé</option>
+        </select>
+        <button type="submit">Ajouter Commande</button>
+    </form>
+
+    <table id="orders-list">
+        <thead>
+            <tr>
+                <th>Nom du Client</th>
+                <th>Numéro de Facture</th>
+                <th>Détails de la Commande</th>
+                <th>Date d'Achat</th>
+                <th>Montant de la Commande</th>
+                <th>Statut de Paiement</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Les lignes de commande seront ajoutées ici -->
+        </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="scripts.js"></script></body>
+</html>
+
+

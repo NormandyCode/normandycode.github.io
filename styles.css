@@ -1,0 +1,181 @@
+/* Style de base du corps */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5; /* Couleur de fond douce */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Style du tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    background-color: #ffffff; /* Couleur blanche pour le tableau */
+}
+
+/* En-tête du tableau */
+thead {
+    background-color: #343a40; /* Couleur sombre */
+    color: #ffffff; /* Texte blanc */
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+/* Styles des cellules du tableau */
+td {
+    padding: 15px;
+    border: 1px solid #e1e1e1;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+/* Effet de survol sur les cellules */
+tr:hover td {
+    background-color: #e9ecef; /* Couleur légère au survol */
+}
+
+/* Style des produits dans la colonne "Détails de la Commande" */
+table td ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+table td ul li {
+    background-color: #00bcd4; /* Couleur du produit */
+    color: #ffffff; /* Texte blanc */
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Effet de survol sur les éléments de liste */
+table td ul li:hover {
+    background-color: #0097a7; /* Couleur plus foncée au survol */
+}
+
+/* Style des boutons */
+button {
+    background-color: #007bff; /* Couleur principale */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Couleur plus foncée au survol */
+    transform: translateY(-2px);
+}
+
+/* Style pour le bouton de suppression */
+.remove-row {
+    background-color: #dc3545; /* Rouge pour le bouton de suppression */
+}
+
+.remove-row:hover {
+    background-color: #c82333; /* Couleur plus foncée au survol */
+}
+
+/* Style pour les lignes marquées comme commandées ou livrées */
+.tr-commande {
+    background-color: rgba(33, 150, 243, 0.2); /* Vert clair */
+}
+
+.tr-livree {
+    background-color: rgba(76, 175, 80, 0.2) ; /* Bleu clair */
+}
+
+/* Réglages pour le formulaire */
+input[type="text"], select {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #007bff; /* Bordure bleue au focus */
+    outline: none;
+}
+
+/* Style des conteneurs de produits */
+#product-container {
+    margin-bottom: 20px;
+}
+
+/* Animation des lignes de tableau */
+tr {
+    transition: background-color 0.3s;
+}
+
+.paye {
+    background-color: rgba(76, 175, 80, 0.2); /* Vert clair pour "Payé" */
+    color: #4CAF50; /* Texte vert foncé */
+    font-weight: bold; /* Texte en gras pour le statut */
+}
+
+.non-paye {
+    background-color: rgba(244, 67, 54, 0.2); /* Rouge clair pour "Non payé" */
+    color: #F44336; /* Texte rouge foncé */
+    font-weight: bold; /* Texte en gras pour le statut */
+}
+
+.order-details-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+
+/* Style pour le champ de date */
+input[type="date"] {
+    width: calc(100% - 20px); /* Largeur du champ de date */
+    padding: 12px; /* Padding pour le champ de date */
+    border: 1px solid #e1e1e1; /* Bordure gris clair */
+    border-radius: 5px; /* Coins arrondis */
+    margin-bottom: 15px; /* Espacement inférieur */
+    transition: border-color 0.3s; /* Transition douce pour le focus */
+}
+
+/* Style pour le focus sur le champ de date */
+input[type="date"]:focus {
+    border-color: #007bff; /* Bordure bleue au focus */
+    outline: none; /* Enlever le contour par défaut */
+}
+/* Réactivité */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 8px 12px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
